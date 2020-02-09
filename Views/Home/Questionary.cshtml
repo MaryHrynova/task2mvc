@@ -1,0 +1,97 @@
+﻿@{
+                /**/
+
+                ViewBag.Title = "Questionary";
+}
+
+
+<div class="col-sm-8 my-item divcolor">
+    @using (Html.BeginForm("Questionary", "Home", FormMethod.Post))
+    {
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="inputName4">Name</label>
+                <input name="username" type="text" class="form-control" id="inputName4">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="inputSurname4">Surmane</label>
+                <input name="usersurname" type="text" class="form-control" id="inputSurname4">
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="inputEmail4">Email</label>
+                <input name="useremail" type="email" class="form-control" id="inputEmail4">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="inputPassword4">Password</label>
+                <input name="userpass" type="password" class="form-control" id="inputPassword4">
+            </div>
+        </div>
+
+        <div class="form-row">
+
+            <div class="form-group col-md-6">
+                <label for="inputCity">Country</label>
+                <select name="usercountry" id="inputCity" class="form-control">
+                    <option selected>Ukraine</option>
+
+                </select>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="inputCity">City</label>
+                <select name="usercity" id="inputCity" class="form-control">
+                    <option>Kharkiv</option>
+                    <option>Odessa</option>
+                    <option>Kiew</option>
+                    <option>Lviv</option>
+                </select>
+            </div>
+
+            <div class="form-group col-md-5">
+                <label for="inputZip">Age</label>
+                <input name="userage" type="number" class="form-control" id="inputZip" placeholder="Введите ваш возраст">
+            </div>
+
+
+        </div>
+        <br />
+        <label>Выберите ваш гендер</label>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="usergendermale" id="exampleRadios1" value="Male">
+            <label class="form-check-label" for="exampleRadios1">
+                Мужской
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="usergenderfemale" id="exampleRadios2" value="Female">
+            <label class="form-check-label" for="exampleRadios2">
+                Женский
+            </label>
+        </div>
+        <div class="form-check disabled">
+            <input class="form-check-input" type="radio" name="usergender" id="exampleRadios3" value="Helicopter" disabled>
+            <label class="form-check-label" for="exampleRadios3">
+                Нейтральный
+            </label>
+            <small id="passwordHelpInline" class="text-muted">
+                (Есть только два гендера)
+            </small>
+        </div>
+
+        <br />
+        <br />
+        <br />
+
+        <div class="form-group">
+            <div class="form-check">
+                <input name="useraccept" class="form-check-input" type="checkbox" id="gridCheck">
+                <label class="form-check-label" for="gridCheck">
+                    I accept with..
+                </label>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary"> Submit form</button>
+    }
+</div>

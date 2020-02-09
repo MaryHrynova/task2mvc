@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Blog Home - Start Bootstrap Template</title>
+
+    <!-- Bootstrap core CSS -->
+    @Styles.Render("~/Content/bootstrap.min.css")
+    @Styles.Render("~/Content/Site1.css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar bg-dark">
+        <div class="row">
+            <div class="col-3">
+                <img class="img-fluid" src="~/Content/photo1.jpg" />
+            </div>
+            <div class="col-2"></div>
+            <div class="col-7 justify-content-center">
+                <h1>Homeless</h1>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <div class="row">
+
+            <!-- Blog Entries Column -->
+            <div class="col-md-8">
+                @RenderBody()
+
+
+                <!-- Blog Post -->
+
+
+            </div>
+
+            <!-- Sidebar Widgets Column -->
+            <div class="col-md-4">
+
+
+
+                <!-- Categories Widget -->
+                <div class="card my-4">
+
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <ul class="list-unstyled mb-0">
+                                    @Html.ActionLink("Главная", "Index", "Home", new { @class = "page-link" })
+                                    @Html.ActionLink("Гостевая", "Guest", "Home", new { @class = "page-link" })
+                                    @Html.ActionLink("Анкета", "Questionary", "Home", new { @class = "page-link" })
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <!-- /.row -->
+
+        </div>
+
+    </div>
+
+    <!-- /.container -->
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+        <div class="container">
+            <p class="float-right text-white"><a href="#"> Back to Top</a></p>
+            <p class="float-left text-white">Copyright &copy; Mary Hrynova</p>
+        </div>
+        <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+
+</body>
+
+</html>
